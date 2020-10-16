@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
-  "height": 300,
+  "title": "Road deaths Victoria 2017-2019",
+  "width": 600,
+  "height": 400,
   "layer": [
     {
       "data": {
@@ -32,13 +33,19 @@
         "longitude": {
           "field": "LONGITUDE",
           "type": "quantitative"
-        },
+        }, 
         "latitude": {
           "field": "LATITUDE",
           "type": "quantitative"
         },
         "size": {"value": 10},
-        "color": {"value": "steelblue"}
+        "color": {"field": "FATALITY", 
+          "title": "Number of fatalities",
+        "type": "quantitative",
+        "scale":{
+        "scheme":"reds"
+      }
+    }
       }
     }
   ]
